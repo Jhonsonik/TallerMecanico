@@ -58,7 +58,8 @@ namespace TallerMecanico.Entidades
             this._activo = Activo;
         }
 
-        public Categoria(int Id, string Codigo, string Nombre, string Observacion) : this(Id, Codigo, Nombre, Observacion,true)
+        public Categoria(int Id, string Codigo, string Nombre, string Observacion) 
+            : this(Id, Codigo, Nombre, Observacion,true)
         {
         }
 
