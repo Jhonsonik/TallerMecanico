@@ -75,8 +75,12 @@ namespace TallerMecanico
                 dgvDatos.Rows.Clear();
                 for (int i = 0; i < lista.Count; i++)
                 {
-                    dgvDatos.Rows.Add(lista[i].Id, lista[i].Codigo,
-                        lista[i].Nombre, lista[i].Observacion);
+                    dgvDatos.Rows.Add(
+                        lista[i].Id, 
+                        lista[i].Codigo,
+                        lista[i].Nombre, 
+                        lista[i].Observacion
+                        );
                 }
             }
         }

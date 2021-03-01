@@ -12,13 +12,12 @@ namespace TallerMecanico.Entidades
         //Recuerde que la clase debe tener los mismos tipos de datos relacionados con el objeto en la base de datos. 
         int _id;
         int _tpu_id;
-        string _codigo;
         string _nombre;
         string _documento;
         string _celular;
         string _correo;
         string _usuario;
-        byte _contrasena;
+        //byte[] _contrasena;
         bool _activo;
 
         // Se definen los metodos get y set
@@ -32,12 +31,6 @@ namespace TallerMecanico.Entidades
         {
             get { return _tpu_id; }
             set { _tpu_id = value; }
-        }
-
-        public string Codigo
-        {
-            get { return _codigo; }
-            set { _codigo = value; }
         }
 
         public string Nombre
@@ -70,11 +63,11 @@ namespace TallerMecanico.Entidades
             set { _usuario = value; }
         }
 
-        public byte Contrasena
-        {
-            get { return _contrasena; }
-            set { _contrasena = value; }
-        }
+        //public byte[] Contrasena
+        //{
+        //    get { return _contrasena; }
+        //    set { _contrasena = value; }
+        //}
 
         public bool Activo
         {
@@ -84,29 +77,28 @@ namespace TallerMecanico.Entidades
 
 
         // Se crean los constructores de la clase
-        public Usuario(int Id, string Codigo, string Nombre, 
+        public Usuario(int Id, string Nombre, 
             string Documento, string Celular, string Correo,
-            string UsuarioL, byte Contrasena,int Tpu_Id,
+            string UsuarioL, /*byte[] Contrasena,*/int Tpu_Id,
             bool Activo)
         {
             this._id = Id;
             this._tpu_id = Tpu_Id;
-            this._codigo = Codigo;
             this._nombre = Nombre;
             this._documento = Documento;
             this._celular = Celular;
             this._correo = Correo;
             this._usuario = UsuarioL;
-            this._contrasena = Contrasena;
+            //this._contrasena = Contrasena;
             this._activo = Activo;
         }
 
         public Usuario(
-            int Id, int Tpu_Id, string Codigo, string Nombre,
+            int Id, int Tpu_Id, string Nombre,
             string Documento, string Celular, string Correo,
-            string UsuarioL, byte Contrasena
+            string UsuarioL//, byte[] Contrasena
             ) 
-      : this(Id, Codigo, Nombre, Documento, Celular, Correo, UsuarioL, Contrasena, Tpu_Id, true)
+      : this(Id, Nombre, Documento, Celular, Correo, UsuarioL, /*Contrasena,*/ Tpu_Id, true)
         {
         }
 
