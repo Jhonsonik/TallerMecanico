@@ -45,18 +45,13 @@ namespace TallerMecanico.Datos
                     while (dr.Read())
                     {
                         Usuario u = new Usuario(
-                            (int)dr["Id"], 
-                             (string)dr["Nombre"], 
-                             (string)dr["Documento"],
-                            (string)dr["Celular"], 
-                            (string)dr["Correo"],
-                            (string)dr["UsuarioL"], 
-                            //Encoding.ASCII.GetBytes(dr["Contrasena"].ToString()),
-                            (int)dr["Tpu_Id"], 
-                            (bool)dr["Activo"]);
+                            (int)dr["Id"], (string)dr["Codigo"],
+                             (string)dr["Nombre"], (string)dr["Documento"],
+                            (string)dr["Celular"], (string)dr["Correo"],
+                            (string)dr["UsuarioL"], (byte)dr["Contrasena"],
+                            (int)dr["Tpu_Id"], (bool)dr["Activo"]);
                         lista.Add(u);
                     }
-                    //listBox1.Items.AddRange(ItemObject)
                 }
             }
             return lista;
@@ -76,10 +71,10 @@ namespace TallerMecanico.Datos
                 {
                     dr.Read();
                     Usuario = new Usuario(
-                            (int)dr["Id"], 
-                            (string)dr["Nombre"], (string)dr["Documento"],
+                            (int)dr["Id"], (string)dr["Codigo"],
+                             (string)dr["Nombre"], (string)dr["Documento"],
                             (string)dr["Celular"], (string)dr["Correo"],
-                            (string)dr["UsuarioL"], //Encoding.ASCII.GetBytes(dr["Contrasena"].ToString()),
+                            (string)dr["UsuarioL"], (byte)dr["Contrasena"],
                             (int)dr["Tpu_Id"], (bool)dr["Activo"]);
                 }
             }
@@ -100,7 +95,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@USR_CELULAR", Usuario.Celular);
                 cmd.Parameters.AddWithValue("@USR_CORREO", Usuario.Correo);
                 cmd.Parameters.AddWithValue("@USR_USUARIO", Usuario.UsuarioL);
-                //cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
+                cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
                 cmd.Parameters.AddWithValue("@USR_ACTIVO", Usuario.Activo);
 
                 n = cmd.ExecuteNonQuery();
@@ -122,7 +117,7 @@ namespace TallerMecanico.Datos
                 cmd.Parameters.AddWithValue("@USR_CELULAR", Usuario.Celular);
                 cmd.Parameters.AddWithValue("@USR_CORREO", Usuario.Correo);
                 cmd.Parameters.AddWithValue("@USR_USUARIO", Usuario.UsuarioL);
-                //cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
+                cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
                 cmd.Parameters.AddWithValue("@USR_ACTIVO", Usuario.Activo);
                 n = cmd.ExecuteNonQuery();
             }

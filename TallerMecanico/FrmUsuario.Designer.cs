@@ -29,187 +29,67 @@ namespace TallerMecanico
         /// </summary>
         private void InitializeComponent()
         {
-            this.GbDatosUsr = new System.Windows.Forms.GroupBox();
-            this.CmbTipUsr = new System.Windows.Forms.ComboBox();
-            this.TxtContrasUsr = new System.Windows.Forms.TextBox();
-            this.TxtCorreoUsr = new System.Windows.Forms.TextBox();
-            this.TxtDocUsr = new System.Windows.Forms.TextBox();
-            this.TxtNomUsr = new System.Windows.Forms.TextBox();
-            this.TxtLoginUsr = new System.Windows.Forms.TextBox();
-            this.TxtCelUsr = new System.Windows.Forms.TextBox();
-            this.LblContrasUsr = new System.Windows.Forms.Label();
-            this.LblCorreoUsr = new System.Windows.Forms.Label();
-            this.LblDocUsr = new System.Windows.Forms.Label();
-            this.LblNomUsr = new System.Windows.Forms.Label();
-            this.LblLoginUsr = new System.Windows.Forms.Label();
-            this.LblCelUsr = new System.Windows.Forms.Label();
-            this.LblTipUsr = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnSalirUsr = new System.Windows.Forms.Button();
-            this.BtnEliUsr = new System.Windows.Forms.Button();
-            this.BtnEdiUsr = new System.Windows.Forms.Button();
-            this.BtnGuaUsr = new System.Windows.Forms.Button();
-            this.BtnNueUsr = new System.Windows.Forms.Button();
-            this.dgvDatosUsr = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GbDatosUsr.SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosUsr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // GbDatosUsr
+            // groupBox1
             // 
-            this.GbDatosUsr.Controls.Add(this.CmbTipUsr);
-            this.GbDatosUsr.Controls.Add(this.TxtContrasUsr);
-            this.GbDatosUsr.Controls.Add(this.TxtCorreoUsr);
-            this.GbDatosUsr.Controls.Add(this.TxtDocUsr);
-            this.GbDatosUsr.Controls.Add(this.TxtNomUsr);
-            this.GbDatosUsr.Controls.Add(this.TxtLoginUsr);
-            this.GbDatosUsr.Controls.Add(this.TxtCelUsr);
-            this.GbDatosUsr.Controls.Add(this.LblContrasUsr);
-            this.GbDatosUsr.Controls.Add(this.LblCorreoUsr);
-            this.GbDatosUsr.Controls.Add(this.LblDocUsr);
-            this.GbDatosUsr.Controls.Add(this.LblNomUsr);
-            this.GbDatosUsr.Controls.Add(this.LblLoginUsr);
-            this.GbDatosUsr.Controls.Add(this.LblCelUsr);
-            this.GbDatosUsr.Controls.Add(this.LblTipUsr);
-            this.GbDatosUsr.Location = new System.Drawing.Point(27, 28);
-            this.GbDatosUsr.Name = "GbDatosUsr";
-            this.GbDatosUsr.Size = new System.Drawing.Size(610, 205);
-            this.GbDatosUsr.TabIndex = 0;
-            this.GbDatosUsr.TabStop = false;
-            this.GbDatosUsr.Text = "groupBox1";
-            // 
-            // CmbTipUsr
-            // 
-            this.CmbTipUsr.FormattingEnabled = true;
-            this.CmbTipUsr.Location = new System.Drawing.Point(81, 32);
-            this.CmbTipUsr.Name = "CmbTipUsr";
-            this.CmbTipUsr.Size = new System.Drawing.Size(214, 21);
-            this.CmbTipUsr.TabIndex = 16;
-            this.CmbTipUsr.Text = "Por favor Seleccione Tipo de Usuario";
-            this.CmbTipUsr.SelectedIndexChanged += new System.EventHandler(this.CmbTipUsr_SelectedIndexChanged);
-            // 
-            // TxtContrasUsr
-            // 
-            this.TxtContrasUsr.Location = new System.Drawing.Point(383, 120);
-            this.TxtContrasUsr.Name = "TxtContrasUsr";
-            this.TxtContrasUsr.PasswordChar = '*';
-            this.TxtContrasUsr.Size = new System.Drawing.Size(214, 20);
-            this.TxtContrasUsr.TabIndex = 15;
-            // 
-            // TxtCorreoUsr
-            // 
-            this.TxtCorreoUsr.Location = new System.Drawing.Point(383, 91);
-            this.TxtCorreoUsr.Name = "TxtCorreoUsr";
-            this.TxtCorreoUsr.Size = new System.Drawing.Size(214, 20);
-            this.TxtCorreoUsr.TabIndex = 14;
-            // 
-            // TxtDocUsr
-            // 
-            this.TxtDocUsr.Location = new System.Drawing.Point(383, 62);
-            this.TxtDocUsr.Name = "TxtDocUsr";
-            this.TxtDocUsr.Size = new System.Drawing.Size(214, 20);
-            this.TxtDocUsr.TabIndex = 13;
-            this.TxtDocUsr.TextChanged += new System.EventHandler(this.TxtDocUsr_TextChanged);
-            // 
-            // TxtNomUsr
-            // 
-            this.TxtNomUsr.Location = new System.Drawing.Point(81, 62);
-            this.TxtNomUsr.Name = "TxtNomUsr";
-            this.TxtNomUsr.Size = new System.Drawing.Size(214, 20);
-            this.TxtNomUsr.TabIndex = 12;
-            // 
-            // TxtLoginUsr
-            // 
-            this.TxtLoginUsr.Location = new System.Drawing.Point(81, 120);
-            this.TxtLoginUsr.Name = "TxtLoginUsr";
-            this.TxtLoginUsr.Size = new System.Drawing.Size(214, 20);
-            this.TxtLoginUsr.TabIndex = 11;
-            // 
-            // TxtCelUsr
-            // 
-            this.TxtCelUsr.Location = new System.Drawing.Point(81, 91);
-            this.TxtCelUsr.Name = "TxtCelUsr";
-            this.TxtCelUsr.Size = new System.Drawing.Size(214, 20);
-            this.TxtCelUsr.TabIndex = 10;
-            // 
-            // LblContrasUsr
-            // 
-            this.LblContrasUsr.AutoSize = true;
-            this.LblContrasUsr.Location = new System.Drawing.Point(315, 123);
-            this.LblContrasUsr.Name = "LblContrasUsr";
-            this.LblContrasUsr.Size = new System.Drawing.Size(61, 13);
-            this.LblContrasUsr.TabIndex = 7;
-            this.LblContrasUsr.Text = "Contraseña";
-            // 
-            // LblCorreoUsr
-            // 
-            this.LblCorreoUsr.AutoSize = true;
-            this.LblCorreoUsr.Location = new System.Drawing.Point(315, 94);
-            this.LblCorreoUsr.Name = "LblCorreoUsr";
-            this.LblCorreoUsr.Size = new System.Drawing.Size(38, 13);
-            this.LblCorreoUsr.TabIndex = 6;
-            this.LblCorreoUsr.Text = "Correo";
-            // 
-            // LblDocUsr
-            // 
-            this.LblDocUsr.AutoSize = true;
-            this.LblDocUsr.Location = new System.Drawing.Point(315, 65);
-            this.LblDocUsr.Name = "LblDocUsr";
-            this.LblDocUsr.Size = new System.Drawing.Size(62, 13);
-            this.LblDocUsr.TabIndex = 5;
-            this.LblDocUsr.Text = "Documento";
-            // 
-            // LblNomUsr
-            // 
-            this.LblNomUsr.AutoSize = true;
-            this.LblNomUsr.Location = new System.Drawing.Point(13, 65);
-            this.LblNomUsr.Name = "LblNomUsr";
-            this.LblNomUsr.Size = new System.Drawing.Size(44, 13);
-            this.LblNomUsr.TabIndex = 4;
-            this.LblNomUsr.Text = "Nombre";
-            // 
-            // LblLoginUsr
-            // 
-            this.LblLoginUsr.AutoSize = true;
-            this.LblLoginUsr.Location = new System.Drawing.Point(13, 123);
-            this.LblLoginUsr.Name = "LblLoginUsr";
-            this.LblLoginUsr.Size = new System.Drawing.Size(33, 13);
-            this.LblLoginUsr.TabIndex = 3;
-            this.LblLoginUsr.Text = "Login";
-            // 
-            // LblCelUsr
-            // 
-            this.LblCelUsr.AutoSize = true;
-            this.LblCelUsr.Location = new System.Drawing.Point(13, 94);
-            this.LblCelUsr.Name = "LblCelUsr";
-            this.LblCelUsr.Size = new System.Drawing.Size(39, 13);
-            this.LblCelUsr.TabIndex = 2;
-            this.LblCelUsr.Text = "Celular";
-            // 
-            // LblTipUsr
-            // 
-            this.LblTipUsr.AutoSize = true;
-            this.LblTipUsr.Location = new System.Drawing.Point(13, 35);
-            this.LblTipUsr.Name = "LblTipUsr";
-            this.LblTipUsr.Size = new System.Drawing.Size(67, 13);
-            this.LblTipUsr.TabIndex = 0;
-            this.LblTipUsr.Text = "Tipo Usuario";
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(27, 28);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(610, 205);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.BtnSalirUsr);
-            this.groupBox2.Controls.Add(this.BtnEliUsr);
-            this.groupBox2.Controls.Add(this.BtnEdiUsr);
-            this.groupBox2.Controls.Add(this.BtnGuaUsr);
-            this.groupBox2.Controls.Add(this.BtnNueUsr);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(643, 28);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(134, 205);
@@ -217,158 +97,234 @@ namespace TallerMecanico
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // BtnSalirUsr
+            // dataGridView1
             // 
-            this.BtnSalirUsr.Location = new System.Drawing.Point(29, 156);
-            this.BtnSalirUsr.Name = "BtnSalirUsr";
-            this.BtnSalirUsr.Size = new System.Drawing.Size(75, 23);
-            this.BtnSalirUsr.TabIndex = 4;
-            this.BtnSalirUsr.Text = "Salir";
-            this.BtnSalirUsr.UseVisualStyleBackColor = true;
-            this.BtnSalirUsr.Click += new System.EventHandler(this.BtnSalirUsr_Click);
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(27, 240);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(750, 254);
+            this.dataGridView1.TabIndex = 2;
             // 
-            // BtnEliUsr
+            // button1
             // 
-            this.BtnEliUsr.Location = new System.Drawing.Point(29, 127);
-            this.BtnEliUsr.Name = "BtnEliUsr";
-            this.BtnEliUsr.Size = new System.Drawing.Size(75, 23);
-            this.BtnEliUsr.TabIndex = 3;
-            this.BtnEliUsr.Text = "Eliminar";
-            this.BtnEliUsr.UseVisualStyleBackColor = true;
-            this.BtnEliUsr.Click += new System.EventHandler(this.BtnEliUsr_Click);
+            this.button1.Location = new System.Drawing.Point(29, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // BtnEdiUsr
+            // button2
             // 
-            this.BtnEdiUsr.Location = new System.Drawing.Point(29, 98);
-            this.BtnEdiUsr.Name = "BtnEdiUsr";
-            this.BtnEdiUsr.Size = new System.Drawing.Size(75, 23);
-            this.BtnEdiUsr.TabIndex = 2;
-            this.BtnEdiUsr.Text = "Editar";
-            this.BtnEdiUsr.UseVisualStyleBackColor = true;
-            this.BtnEdiUsr.Click += new System.EventHandler(this.BtnEdiUsr_Click);
+            this.button2.Location = new System.Drawing.Point(29, 69);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // BtnGuaUsr
+            // button3
             // 
-            this.BtnGuaUsr.Location = new System.Drawing.Point(29, 69);
-            this.BtnGuaUsr.Name = "BtnGuaUsr";
-            this.BtnGuaUsr.Size = new System.Drawing.Size(75, 23);
-            this.BtnGuaUsr.TabIndex = 1;
-            this.BtnGuaUsr.Text = "Guardar";
-            this.BtnGuaUsr.UseVisualStyleBackColor = true;
-            this.BtnGuaUsr.Click += new System.EventHandler(this.BtnGuaUsr_Click);
+            this.button3.Location = new System.Drawing.Point(29, 98);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // BtnNueUsr
+            // button4
             // 
-            this.BtnNueUsr.Location = new System.Drawing.Point(29, 40);
-            this.BtnNueUsr.Name = "BtnNueUsr";
-            this.BtnNueUsr.Size = new System.Drawing.Size(75, 23);
-            this.BtnNueUsr.TabIndex = 0;
-            this.BtnNueUsr.Text = "Nuevo";
-            this.BtnNueUsr.UseVisualStyleBackColor = true;
-            this.BtnNueUsr.Click += new System.EventHandler(this.BtnNueUsr_Click);
+            this.button4.Location = new System.Drawing.Point(29, 127);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // dgvDatosUsr
+            // button5
             // 
-            this.dgvDatosUsr.AllowUserToDeleteRows = false;
-            this.dgvDatosUsr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosUsr.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Nombre,
-            this.Documento,
-            this.Celular,
-            this.Correo,
-            this.Usuario,
-            this.Activo});
-            this.dgvDatosUsr.Location = new System.Drawing.Point(27, 240);
-            this.dgvDatosUsr.Name = "dgvDatosUsr";
-            this.dgvDatosUsr.Size = new System.Drawing.Size(750, 254);
-            this.dgvDatosUsr.TabIndex = 2;
+            this.button5.Location = new System.Drawing.Point(29, 156);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // Id
+            // label1
             // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tipo Usuario";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Nombre
+            // label2
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre";
             // 
-            // Documento
+            // label3
             // 
-            this.Documento.HeaderText = "Documento";
-            this.Documento.Name = "Documento";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Celular";
             // 
-            // Celular
+            // label4
             // 
-            this.Celular.HeaderText = "Celular";
-            this.Celular.Name = "Celular";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Usuario";
             // 
-            // Correo
+            // label5
             // 
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(315, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Nombre";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // Usuario
+            // label6
             // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(315, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Documento";
             // 
-            // Activo
+            // label7
             // 
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            this.Activo.Visible = false;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(315, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Correo";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(315, 123);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Contraseña";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(81, 62);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(214, 20);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(81, 91);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(214, 20);
+            this.textBox3.TabIndex = 10;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(81, 120);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(214, 20);
+            this.textBox4.TabIndex = 11;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(383, 32);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(214, 20);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(383, 62);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(214, 20);
+            this.textBox6.TabIndex = 13;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(383, 91);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(214, 20);
+            this.textBox7.TabIndex = 14;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(383, 120);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(214, 20);
+            this.textBox8.TabIndex = 15;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(81, 32);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(214, 21);
+            this.comboBox1.TabIndex = 16;
             // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 518);
-            this.Controls.Add(this.dgvDatosUsr);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.GbDatosUsr);
+            this.Controls.Add(this.groupBox1);
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
-            this.GbDatosUsr.ResumeLayout(false);
-            this.GbDatosUsr.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosUsr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GbDatosUsr;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvDatosUsr;
-        private System.Windows.Forms.Button BtnNueUsr;
-        private System.Windows.Forms.Button BtnSalirUsr;
-        private System.Windows.Forms.Button BtnEliUsr;
-        private System.Windows.Forms.Button BtnEdiUsr;
-        private System.Windows.Forms.Button BtnGuaUsr;
-        private System.Windows.Forms.TextBox TxtContrasUsr;
-        private System.Windows.Forms.TextBox TxtCorreoUsr;
-        private System.Windows.Forms.TextBox TxtDocUsr;
-        private System.Windows.Forms.TextBox TxtNomUsr;
-        private System.Windows.Forms.TextBox TxtLoginUsr;
-        private System.Windows.Forms.TextBox TxtCelUsr;
-        private System.Windows.Forms.Label LblContrasUsr;
-        private System.Windows.Forms.Label LblCorreoUsr;
-        private System.Windows.Forms.Label LblDocUsr;
-        private System.Windows.Forms.Label LblNomUsr;
-        private System.Windows.Forms.Label LblLoginUsr;
-        private System.Windows.Forms.Label LblCelUsr;
-        private System.Windows.Forms.Label LblTipUsr;
-        private System.Windows.Forms.ComboBox CmbTipUsr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
