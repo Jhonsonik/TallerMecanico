@@ -14,45 +14,45 @@ namespace TallerMecanico.Datos
 {
     public class DAOLogin
     {
-        string _cadenaConexion;
+        //string _cadenaConexion;
 
-        public string CadenaConexion
-        {
-            get
-            {
-                if (_cadenaConexion == null)
-                {
-                    _cadenaConexion = ConfigurationManager.
-                        ConnectionStrings["Conex"].ConnectionString;
-                }
-                return _cadenaConexion;
-            }
-            set { _cadenaConexion = value; }
-        }
-        //metodo para traer un usuari segun su identificación 
-        public Usuario TraerPorId(int Id)
-        {
-            Usuario Usuario = new Usuario();
-            using (SqlConnection con = new SqlConnection(CadenaConexion))
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("TraerUsuarioPorId", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", Id);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    dr.Read();
-                    Usuario = new Usuario(
-                            (int)dr["Id"], (string)dr["Codigo"],
-                             (string)dr["Nombre"], (string)dr["Documento"],
-                            (string)dr["Celular"], (string)dr["Correo"],
-                            (string)dr["UsuarioL"], (byte)dr["Contrasena"],
-                            (int)dr["Tpu_Id"], (bool)dr["Activo"]);
-                }
-            }
-            return Usuario;
-        }
+        //public string CadenaConexion
+        //{
+        //    get
+        //    {
+        //        if (_cadenaConexion == null)
+        //        {
+        //            _cadenaConexion = ConfigurationManager.
+        //                ConnectionStrings["Conex"].ConnectionString;
+        //        }
+        //        return _cadenaConexion;
+        //    }
+        //    set { _cadenaConexion = value; }
+        //}
+        ////metodo para traer un usuari segun su identificación 
+        //public Usuario TraerPorId(int Id)
+        //{
+        //    Usuario Usuario = new Usuario();
+        //    using (SqlConnection con = new SqlConnection(CadenaConexion))
+        //    {
+        //        con.Open();
+        //        SqlCommand cmd = new SqlCommand("TraerUsuarioPorId", con);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@ID", Id);
+        //        SqlDataReader dr = cmd.ExecuteReader();
+        //        if (dr != null && dr.HasRows)
+        //        {
+        //            dr.Read();
+        //            Usuario = new Usuario(
+        //                    (int)dr["Id"], (string)dr["Codigo"],
+        //                     (string)dr["Nombre"], (string)dr["Documento"],
+        //                    (string)dr["Celular"], (string)dr["Correo"],
+        //                    (string)dr["UsuarioL"], (byte)dr["Contrasena"],
+        //                    (int)dr["Tpu_Id"], (bool)dr["Activo"]);
+        //        }
+        //    }
+        //    return Usuario;
+        //}
     }
 }
 

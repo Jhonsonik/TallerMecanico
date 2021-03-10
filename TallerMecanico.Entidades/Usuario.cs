@@ -11,15 +11,15 @@ namespace TallerMecanico.Entidades
         // Atributos  de la clase Categoria
         //Recuerde que la clase debe tener los mismos tipos de datos relacionados con el objeto en la base de datos. 
         int _id;
-        int _tpu_id;
-        string _codigo;
+        //int _id_tipousuario;
+        string _tipousuarionombre;
         string _nombre;
         string _documento;
         string _celular;
         string _correo;
         string _usuario;
-        byte _contrasena;
-        bool _activo;
+        //byte _contrasena;
+        //bool _activo;
 
         // Se definen los metodos get y set
         public int Id
@@ -28,16 +28,16 @@ namespace TallerMecanico.Entidades
             set { _id = value; }
         }
 
-        public int Tpu_Id
-        {
-            get { return _tpu_id; }
-            set { _tpu_id = value; }
-        }
+        //public int Id_TipoUsuario
+        //{
+        //    get { return _id_tipousuario; }
+        //    set { _id_tipousuario = value; }
+        //}
 
-        public string Codigo
+        public string TipoUsuarioNombre
         {
-            get { return _codigo; }
-            set { _codigo = value; }
+            get { return _tipousuarionombre; }
+            set { _tipousuarionombre = value; }
         }
 
         public string Nombre
@@ -70,56 +70,48 @@ namespace TallerMecanico.Entidades
             set { _usuario = value; }
         }
 
-        public byte Contrasena
-        {
-            get { return _contrasena; }
-            set { _contrasena = value; }
-        }
+        //public byte Contrasena
+        //{
+        //    get { return _contrasena; }
+        //    set { _contrasena = value; }
+        //}
 
-        public bool Activo
-        {
-            get { return _activo; }
-            set { _activo = value; }
-        }
+        //public bool Activo
+        //{
+        //    get { return _activo; }
+        //    set { _activo = value; }
+        //}
 
 
         // Se crean los constructores de la clase
-        public Usuario(int Id, string Codigo, string Nombre, 
-            string Documento, string Celular, string Correo,
-            string UsuarioL, byte Contrasena,int Tpu_Id,
-            bool Activo)
+        public Usuario(int Id, /*int Id_TipoUsuario,*/ string TipoUsuarioNombre, string Nombre, string Documento, string Celular, string Correo,string UsuarioL/*, byte Contrasena*//*,bool Activo*/)
         {
             this._id = Id;
-            this._tpu_id = Tpu_Id;
-            this._codigo = Codigo;
+            //this._id_tipousuario = Id_TipoUsuario;
+            this._tipousuarionombre = TipoUsuarioNombre;
             this._nombre = Nombre;
             this._documento = Documento;
             this._celular = Celular;
             this._correo = Correo;
             this._usuario = UsuarioL;
-            this._contrasena = Contrasena;
-            this._activo = Activo;
+            //this._contrasena = Contrasena;
+            //this._activo = Activo;
         }
 
-        public Usuario(
-            int Id, int Tpu_Id, string Codigo, string Nombre,
-            string Documento, string Celular, string Correo,
-            string UsuarioL, byte Contrasena
-            ) 
-      : this(Id, Codigo, Nombre, Documento, Celular, Correo, UsuarioL, Contrasena, Tpu_Id, true)
+        public Usuario() : this(0, "", "", "","","","")
         {
         }
-
-        public Usuario()
-        {
-        }
-
-        //public Usuario(int Id, string Nombre) : this(Id, "", Nombre, "")
-        //{
-        //}
-
-        //public Usuario() : this(0, "", "", "")
-        //{
-        //}
     }
+    //public class TipoUsuario
+    //{
+    //    // Atributos  de la clase TipoUsuario
+    //    //Recuerde que la clase debe tener los mismos tipos de datos relacionados con el objeto en la base de datos.         
+    //    string _tipousuarionombre;
+
+    //    public TipoUsuario(string TipoUsuarioNombre)
+    //    {
+    //        this._tipousuarionombre = TipoUsuarioNombre;           
+    //    }
+
+    //}
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TallerMecanico.Entidades
 {
-   public class UserBE
+   public class Login
     {
         public string user { get; set; }
         public byte[] pass { get; set; }
         public byte[] salt { get; set; }
         public int rol { get; set; }
         public bool activo { get; set; }
-        public UserBE()
+        public Login()
         {
 
         }

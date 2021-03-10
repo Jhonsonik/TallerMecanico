@@ -27,9 +27,9 @@ namespace TallerMecanico
         {
 
         }
-        private UserBE getUserFromDB(string username)
+        private Login getUserFromDB(string username)
         {
-            UserBE user = new UserBE();
+            Login user = new Login();
 
             var connectionString = ConfigurationManager.ConnectionStrings["Conex"].ConnectionString;
 
@@ -83,7 +83,7 @@ namespace TallerMecanico
         private void BtnAcLogin_Click(object sender, EventArgs e)
         {            
             string username = txtLogin.Text.Trim();
-            UserBE user = getUserFromDB(username);
+            Login user = getUserFromDB(username);
             string pass = txtContrasena.Text.Trim();
             int rol = user.rol;
             bool activo = user.activo;
@@ -122,7 +122,7 @@ namespace TallerMecanico
 
         private bool isValidPassword(string username, string password)
         {
-            UserBE user = getUserFromDB(username);
+            Login user = getUserFromDB(username);
             bool isValid = false;
 
             if (!string.IsNullOrEmpty(user.user))

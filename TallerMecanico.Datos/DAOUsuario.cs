@@ -36,7 +36,7 @@ namespace TallerMecanico.Datos
 
             using (SqlConnection con = new SqlConnection(CadenaConexion))
             {
-                con.Open();
+                 con.Open();
                 SqlCommand cmd = new SqlCommand("ListarUsuarios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -44,19 +44,43 @@ namespace TallerMecanico.Datos
                 {
                     while (dr.Read())
                     {
-                        Usuario u = new Usuario(
-                            (int)dr["Id"], (string)dr["Codigo"],
-                             (string)dr["Nombre"], (string)dr["Documento"],
-                            (string)dr["Celular"], (string)dr["Correo"],
-                            (string)dr["UsuarioL"], (byte)dr["Contrasena"],
-                            (int)dr["Tpu_Id"], (bool)dr["Activo"]);
+                        Usuario u = new Usuario((int)dr["Id"],
+                            (string)dr["TipoUsuarioNombre"],
+                            (string)dr["Nombre"],
+                            (string)dr["Documento"],
+                            (string)dr["Celular"],
+                            (string)dr["Correo"],
+                            (string)dr["UsuarioL"]);
                         lista.Add(u);
                     }
                 }
             }
             return lista;
         }
-        //metodo para traer un usuari segun su identificación 
+        //metodo para traer la lista de Tipos de usuarios
+        //public List<TipoUsuario> ListarTpu()
+        //{
+        //    List<TipoUsuario> listatpu = new List<TipoUsuario>();
+
+        //    using (SqlConnection con = new SqlConnection(CadenaConexion))
+        //    {
+        //        con.Open();
+        //        SqlCommand cmd = new SqlCommand("ListarUsuarios", con);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        SqlDataReader dr = cmd.ExecuteReader();
+        //        if (dr != null && dr.HasRows)
+        //        {
+        //            while (dr.Read())
+        //            {
+        //                TipoUsuario tu = new TipoUsuario((string)dr["TipoUsuarioNombre"]);
+
+        //                listatpu.Add(tu);
+        //            }
+        //        }
+        //    }
+        //    return listatpu;
+        //}
+        //metodo para traer un usuario segun su identificación 
         public Usuario TraerPorId(int Id)
         {
             Usuario Usuario = new Usuario();
@@ -71,11 +95,16 @@ namespace TallerMecanico.Datos
                 {
                     dr.Read();
                     Usuario = new Usuario(
-                            (int)dr["Id"], (string)dr["Codigo"],
-                             (string)dr["Nombre"], (string)dr["Documento"],
-                            (string)dr["Celular"], (string)dr["Correo"],
-                            (string)dr["UsuarioL"], (byte)dr["Contrasena"],
-                            (int)dr["Tpu_Id"], (bool)dr["Activo"]);
+                            (int)dr["Id"],
+                            (string)dr["TipoUsuarioNombre"],
+                            (string)dr["Nombre"],
+                            (string)dr["Documento"],
+                            (string)dr["Celular"],
+                            (string)dr["Correo"],
+                            (string)dr["Usuario"]/*,*/
+                            /*(byte)dr["Contrasena"]*//*,*/
+                            /*(int)dr["Tpu_Id"]*/);/*,*/ 
+                            //(bool)dr["Activo"]);
                 }
             }
             return Usuario;
@@ -89,20 +118,20 @@ namespace TallerMecanico.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("InsertarUsuario", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@USR_TPU_ID", Usuario.Tpu_Id);
+                //cmd.Parameters.AddWithValue("@USR_TPU_ID", Usuario.Tpu_Id);
                 cmd.Parameters.AddWithValue("@USR_NOMBRE", Usuario.Nombre);
                 cmd.Parameters.AddWithValue("@USR_DOCUMENTO", Usuario.Documento);
                 cmd.Parameters.AddWithValue("@USR_CELULAR", Usuario.Celular);
                 cmd.Parameters.AddWithValue("@USR_CORREO", Usuario.Correo);
                 cmd.Parameters.AddWithValue("@USR_USUARIO", Usuario.UsuarioL);
-                cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
-                cmd.Parameters.AddWithValue("@USR_ACTIVO", Usuario.Activo);
+                //cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
+                //cmd.Parameters.AddWithValue("@USR_ACTIVO", Usuario.Activo);
 
                 n = cmd.ExecuteNonQuery();
             }
             return n;
         }
-        //metodo para actualizar una Usuari puentual
+        //metodo para actualizar una Usuari puntual
         public int Actualizar(Usuario Usuario)
         {
             int n = -1;
@@ -111,14 +140,14 @@ namespace TallerMecanico.Datos
                 con.Open();
                 SqlCommand cmd = new SqlCommand("ActualizarUsuario", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@USR_TPU_ID", Usuario.Tpu_Id);
+                //cmd.Parameters.AddWithValue("@USR_TPU_ID", Usuario.Tpu_Id);
                 cmd.Parameters.AddWithValue("@USR_NOMBRE", Usuario.Nombre);
                 cmd.Parameters.AddWithValue("@USR_DOCUMENTO", Usuario.Documento);
                 cmd.Parameters.AddWithValue("@USR_CELULAR", Usuario.Celular);
                 cmd.Parameters.AddWithValue("@USR_CORREO", Usuario.Correo);
                 cmd.Parameters.AddWithValue("@USR_USUARIO", Usuario.UsuarioL);
-                cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
-                cmd.Parameters.AddWithValue("@USR_ACTIVO", Usuario.Activo);
+                //cmd.Parameters.AddWithValue("@USR_CONTRASENA", Usuario.Contrasena);
+                //cmd.Parameters.AddWithValue("@USR_ACTIVO", Usuario.Activo);
                 n = cmd.ExecuteNonQuery();
             }
             return n;
